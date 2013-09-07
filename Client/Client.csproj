@@ -64,6 +64,7 @@
     <Compile Include="Gamestate\FSM\SectorMapScreen.cs" />
     <Compile Include="Gamestate\FSM\SectorScreen.cs" />
     <Compile Include="Gamestate\FSM\ShipSelection.cs" />
+    <Compile Include="Gamestate\FSM\Space.cs" />
     <Compile Include="Gamestate\IRenderable.cs" />
     <Compile Include="Gamestate\IState.cs" />
     <Compile Include="Gamestate\Library.cs" />

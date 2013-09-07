@@ -240,10 +240,13 @@ namespace FTLOverdrive.Client.Gamestate.FSM
             btnStart.HoverSound = Root.Singleton.Sound("audio/waves/ui/select_light1.wav");
             btnStart.OnClick += sender =>
             {
-                var generators = Root.Singleton.mgrState.Get<Library>().GetSectorMapGenerators();
+            	//Taking this out for now and will add it to Space Class so players can pick which point to jump to
+              //  var generators = Root.Singleton.mgrState.Get<Library>().GetSectorMapGenerators();
                 // TODO allow player to chose which generator to use
-                Root.Singleton.mgrState.Get<SectorScreen>().Sector = generators[0].Generate().CurrentNode.Sector;
-                Root.Singleton.mgrState.Activate<SectorScreen>();
+              //  Root.Singleton.mgrState.Get<SectorScreen>().Sector = generators[0].Generate().CurrentNode.Sector;
+              //  Root.Singleton.mgrState.Activate<SectorScreen>();
+                Root.Singleton.Canvas.Clear();               
+                Root.Singleton.mgrState.Activate<Space>();
             };
             Util.LayoutControl(btnStart, 1082, 16, btnStart.Image.Size, rctScreen);
             btnStart.Parent = Root.Singleton.Canvas;
